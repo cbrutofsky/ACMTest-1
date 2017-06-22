@@ -24,7 +24,7 @@
         <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="dashboard.css" rel="stylesheet">
+        <link href="../css/dashboard.css" rel="stylesheet">
     </head>
     <body>
 
@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/index.php">Kennesaw ACM</a>
+                <a class="navbar-brand" href="/old-files_delete-before-deployment/index-old.php">Kennesaw ACM</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
