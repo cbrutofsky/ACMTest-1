@@ -18,9 +18,9 @@ define('DB_DRIVER', 'mysql');
 define('DB_HOST', 'localhost');
 define('DB_HOST_USERNAME', 'root');
 define('DB_HOST_PASSWORD', '');
-define('DB_DATABASE', 'simple-website');
+define('DB_DATABASE', 'ACM-Test');
 
-define('SITE_NAME', 'Simple Website');
+define('SITE_NAME', 'ACM - Test');
 
 // define database tables
 define('TABLE_PAGES', DB_PREFIX.'pages');
