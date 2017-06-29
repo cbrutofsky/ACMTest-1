@@ -72,3 +72,16 @@ function easy_decrypt($str) {
     $str = base64_decode($str);
     return str_replace("_@#!@", "", $str);
 }
+
+
+/**
+ * Strong Encryption
+ */
+function strong_encrypt($str){
+    $hash = password_hash($str, PASSWORD_BCRYPT, ['cost' => 12]);
+    return $hash;
+}
+function strong_decrypt($str){
+
+}
+

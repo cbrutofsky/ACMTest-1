@@ -24,4 +24,5 @@ define('SITE_NAME', 'ACM - Test');
 
 // define database tables
 define('TABLE_PAGES', DB_PREFIX.'pages');
+define('USERS', DB_PREFIX.'users');
 define('TABLE_TAGLINE', DB_PREFIX.'tagline');

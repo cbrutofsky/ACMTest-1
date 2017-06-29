@@ -1,4 +1,4 @@
-<?php require '../functions.php';
+<?php require '../libs/functions.php';
 /**
  * Created by PhpStorm.
  * User: David
@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/old-files_delete-before-deployment/index-old.php">Kennesaw ACM</a>
+                <a class="navbar-brand" href="../index.php">Kennesaw ACM</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
