@@ -18,11 +18,14 @@ define('DB_DRIVER', 'mysql');
 define('DB_HOST', 'localhost');
 define('DB_HOST_USERNAME', 'root');
 define('DB_HOST_PASSWORD', '');
-define('DB_DATABASE', 'ACM-Test');
+define('DB_DATABASE', 'acm-test');
 
 define('SITE_NAME', 'ACM - Test');
 
 // define database tables
-define('TABLE_PAGES', DB_PREFIX.'pages');
-define('USERS', DB_PREFIX.'users');
-define('TABLE_TAGLINE', DB_PREFIX.'tagline');
+define('TABLE_PAGES', DB_PREFIX . 'pages');
+define('USERS', DB_PREFIX . 'users');
+define('TABLE_TAGLINE', DB_PREFIX . 'tagline');
+
+
+define('D_TEMPLATE', 'template');
