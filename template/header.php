@@ -55,22 +55,28 @@
                         <?php } ?>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                        <li>
-                            <buton id="btn-debug" class="btn btn-default"><i class="fa fa-bug"></i></buton>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Name, Here<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="../dashboard/login.php">Admin Login</a></li>
-                                <li><a href="../dashboard/index.php">Dashboard</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
+                        <?php
+                        if (isLoggedIn()) {
+                            echo "<li>";
+                            echo "<buton id=\"btn-debug\" class=\"btn btn-default navbar-btn\"><i class=\"fa fa-bug\"></i></buton>";
+                            echo "</li>";
+
+                            echo "<li class=\"dropdown\">";
+                            echo "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\"
+                               aria-haspopup=\"true\" aria-expanded=\"false\">" . $user['fullname_reverse'] . "<span class=\"caret\"></span></a>";
+                            echo "<ul class=\"dropdown-menu\">";
+                            echo "<li><a href=\"../login.php\">Login (Test)</a></li>";
+                            echo "<li><a href=\"../dashboard/index.php\">Admin Dashboard</a></li>";
+                            echo "<li><a href=\"#\">Account Settings</a></li>";
+                            echo "<li role=\"separator\" class=\"divider\"></li>";
+                            echo "<li class=\"dropdown-header\">Nav header</li>";
+                            echo "<li><a href=\"../logout.php\">Logout</a></li>";
+                            echo "</ul>";
+                            echo "</li>";
+                        } else {
+                            echo "<li><a href='../login.php'>Login</a></li>";
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

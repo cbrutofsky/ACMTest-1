@@ -51,7 +51,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hide Me <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="../dashboard/login.php">Admin Login</a></li>
+                                        <li><a href="login.php">Admin Login</a></li>
                                         <li><a href="../dashboard/index.php">Dashboard</a></li>
                                         <li><a href="#">Something else here</a></li>
                                         <li role="separator" class="divider"></li>

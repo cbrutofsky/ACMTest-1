@@ -13,6 +13,7 @@ global $DB;
 
 # Constants
 
+
 # Functions
 
 
@@ -24,3 +25,17 @@ if (isset($_GET['page'])) {
 }
 
 $page = page_data($pageid);
+
+# Start the Session
+session_start();
+
+# User Setup:
+$user = data_user();
+
+/*if(isset($_SESSION['email']))
+{
+    $q3 = "SELECT * FROM users WHERE email = '$_SESSION[email]'";
+    $r3 = $DB->query($q3);
+    $user = $r3->fetch();
+}*/
+

@@ -91,10 +91,6 @@ function strong_encrypt($str)
     return $hash;
 }
 
-function strong_decrypt($str)
-{
-
-}
 
 function page_data($page_id)
 {
@@ -109,6 +105,44 @@ function page_data($page_id)
     } else {
         $data['body_formatted'] = $data['body'];
     }
+
+    return $data;
+}
+
+function getOptimalBcryptCostParameter($min_ms = 250)
+{
+    for ($i = 4; $i < 31; $i++) {
+        $options = ['cost' => $i, 'salt' => 'usesomesillystringforsalt'];
+        $time_start = microtime(true);
+        password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
+        $time_end = microtime(true);
+        if (($time_end - $time_start) * 1000 > $min_ms) {
+            return $i;
+        }
+    }
+}
+
+function redirectIfNotLoggedIn()
+{
+    if (!isset($_SESSION['email'])) {
+        header('Location: ../login.php');
+    }
+}
+
+function isLoggedIn()
+{
+    return isset($_SESSION['email']);
+}
+
+function data_user()
+{
+    global $DB;
+    $q3 = "SELECT * FROM users WHERE email = '$_SESSION[email]'";
+    $r3 = $DB->query($q3);
+    $data = $r3->fetch();
+
+    $data['fullname'] = $data['first_name'] . $data['last_name'];
+    $data['fullname_reverse'] = $data['last_name'] . ', ' . $data['first_name'];
 
     return $data;
 }

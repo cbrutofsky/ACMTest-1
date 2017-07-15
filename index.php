@@ -32,5 +32,5 @@ if ($page['id'] == 1) {
 ?>
 
 <?php
-include("template/footer.php");
+include(D_TEMPLATE . '/footer.php');
 ?>

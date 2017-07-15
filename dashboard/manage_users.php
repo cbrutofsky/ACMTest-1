@@ -7,7 +7,7 @@
  */
 
 require("../libs/config.php");
-$pageDetails = "manage_pages";
+$pageDetails = "manage_users";
 
 include('../libs/setup.php');
 
@@ -20,49 +20,56 @@ include('template/sidebar.php');
 ?>
 
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <h1 class="page-header">Current Pages</h1>
+        <h1 class="page-header">Current Users</h1>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Created By</th>
-                    <th>Parent Page</th>
-                    <th>Title</th>
-                    <th>Header</th>
-                    <th>Banner Image</th>
-                    <th>Body</th>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Verified?</th>
+                    <th>ACM Level</th>
+                    <th>Permission Group</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
                 global $DB;
-                $q = $DB->query('SELECT * FROM pages');
+                $q = $DB->query('SELECT * FROM users');
                 while ($r = $q->fetch()) {
                     echo "<tr>";
                     echo "<td>";
                     echo $r['id'];
                     echo "</td>";
                     echo "<td>";
-                    echo $r['user'];
+                    echo $r['last_name'];
                     echo "</td>";
                     echo "<td>";
-                    echo $r['parent'];
+                    echo $r['first_name'];
                     echo "</td>";
                     echo "<td>";
-                    echo $r['title'];
+                    echo $r['email'];
                     echo "</td>";
                     echo "<td>";
-                    echo $r['header'];
+                    echo $r['username'];
                     echo "</td>";
                     echo "<td>";
-                    echo $r['banner_image'];
+                    if ($r['email_verification'] == 1) {
+                        echo "Yes";
+                    } else {
+                        echo "No";
+                    }
                     echo "</td>";
                     echo "<td>";
-                    echo $r[''];
+                    echo $r['acm_group'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $r['permissions'];
                     echo "</td>";
                     echo "</tr>";
-
                 }
                 ?>
                 </tbody>
