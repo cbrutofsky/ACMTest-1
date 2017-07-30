@@ -23,41 +23,37 @@ include(D_TEMPLATE . '/header.php');
 
     <div id="banner" class="baseHeader">
         <h1 class="page_title"><?php echo $page['header']; ?></h1>
-        <img src="<?php echo $page['banner_image']; ?>" alt="">
+        <img src="/images/home_page_images/AAEAAQAAAAAAAAkDAAAAJGVmMWZiZmFkLTMwMDQtNDUzMy1iMmRjLTY2ZjE0ZTI0ZjQxOQ.jpg"
+             alt="">
     </div>
 
     <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Login</h3>
-            </div>
-            <div class="panel-body">
-                <?php
-                if ($_POST) {
-                    echo $_POST['inputEmail'];
-                    echo '<br>';
-                    echo $_POST['inputPassword'];
-                }
-                //echo getOptimalBcryptCostParameter();
-                ?>
 
-                <form class="form-signin" action="login.php" method="post" role="form">
-                    <h2 class="form-signin-heading">Please sign in</h2>
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" name="inputEmail"
-                           placeholder="Email address / Username" required autofocus>
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" name="inputPassword"
-                           placeholder="Password" required>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                </form>
+        <?php
+        if ($_POST) {
+            echo $_POST['inputEmail'];
+            echo '<br>';
+            echo $_POST['inputPassword'];
+        }
+        //echo getOptimalBcryptCostParameter();
+        ?>
+
+        <form class="form-signin" action="login.php" method="post" role="form">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" name="inputEmail"
+                   placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" name="inputPassword"
+                   placeholder="Password" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
             </div>
-        </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+
     </div>
 
 <?php

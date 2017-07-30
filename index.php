@@ -17,7 +17,10 @@ include(D_TEMPLATE . '/header.php');
 <?php
 
 if ($page['id'] == 1) {
-    echo $page['body_formatted'];
+    //echo $page['body_formatted'];
+
+    include(D_TEMPLATE . '/home_page.php');
+
 } else { ?>
     <div id="banner" class="baseHeader">
         <h1 class="page_title"><?php echo $page['header']; ?></h1>

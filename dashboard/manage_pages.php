@@ -19,7 +19,7 @@ include('template/header.php');
 include('template/sidebar.php');
 ?>
 
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <h1 class="page-header">Current Pages</h1>
         <div class="table-responsive">
             <table class="table table-striped">
@@ -30,7 +30,6 @@ include('template/sidebar.php');
                     <th>Parent Page</th>
                     <th>Title</th>
                     <th>Header</th>
-                    <th>Banner Image</th>
                     <th>Body</th>
                 </tr>
                 </thead>
@@ -39,12 +38,17 @@ include('template/sidebar.php');
                 global $DB;
                 $q = $DB->query('SELECT * FROM pages');
                 while ($r = $q->fetch()) {
+                    $userID = $r['user'];
+                    $q2 = $DB->prepare('SELECT * FROM users WHERE id=:userID');
+                    $q2->bindParam(':userID', $userID, PDO::PARAM_INT);
+                    $q2->execute();
+                    $r2 = $q2->fetch();
                     echo "<tr>";
                     echo "<td>";
                     echo $r['id'];
                     echo "</td>";
                     echo "<td>";
-                    echo $r['user'];
+                    echo $r2['first_name'] . " " . $r2['last_name'];
                     echo "</td>";
                     echo "<td>";
                     echo $r['parent'];
@@ -56,19 +60,15 @@ include('template/sidebar.php');
                     echo $r['header'];
                     echo "</td>";
                     echo "<td>";
-                    echo $r['banner_image'];
-                    echo "</td>";
-                    echo "<td>";
                     echo $r[''];
                     echo "</td>";
                     echo "</tr>";
-
                 }
                 ?>
                 </tbody>
             </table>
         </div>
-    </div>
+    </main>
 
 
 <?php include(D_TEMPLATE . '/footer.php'); ?>

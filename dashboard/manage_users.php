@@ -19,7 +19,7 @@ include('template/header.php');
 include('template/sidebar.php');
 ?>
 
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <h1 class="page-header">Current Users</h1>
         <div class="table-responsive">
             <table class="table table-striped">
@@ -75,7 +75,7 @@ include('template/sidebar.php');
                 </tbody>
             </table>
         </div>
-    </div>
+    </main>
 
 
 <?php include(D_TEMPLATE . '/footer.php'); ?>

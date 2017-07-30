@@ -18,36 +18,37 @@ redirectIfNotLoggedIn();
 include('template/header.php');
 include('template/sidebar.php');
 ?>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <h1 class="page-header">Dashboard</h1>
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+        <h1>Dashboard</h1>
 
-        <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                     width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200"
+                     height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+                <h4>Label</h4>
+                <div class="text-muted">Something else</div>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200"
+                     height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
                 <h4>Label</h4>
                 <span class="text-muted">Something else</span>
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                     width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+            <div class="col-6 col-sm-3 placeholder">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200"
+                     height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
                 <h4>Label</h4>
                 <span class="text-muted">Something else</span>
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                     width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+            <div class="col-6 col-sm-3 placeholder">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200"
+                     height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
                 <h4>Label</h4>
                 <span class="text-muted">Something else</span>
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                     width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                <h4>Label</h4>
-                <span class="text-muted">Something else</span>
-            </div>
-        </div>
-        <h2 class="sub-header">Section title</h2>
+        </section>
+
+        <h2>Section title</h2>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
@@ -175,9 +176,7 @@ include('template/sidebar.php');
                 </tbody>
             </table>
         </div>
-    </div>
-    </div>
-    </div>
+    </main>
 
 
 <?php include(D_TEMPLATE . '/footer.php'); ?>

@@ -7,99 +7,151 @@ body {
   padding-top: 50px;
 }
 
-
 /*
- * Global add-ons
+ * Typography
  */
 
-.sub-header {
-  padding-bottom: 10px;
+h1 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
   border-bottom: 1px solid #eee;
-}
-
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
-.navbar-fixed-top {
-  border: 0;
 }
 
 /*
  * Sidebar
  */
 
-/* Hide for mobile, show later */
+/************************************************************************/
 .sidebar {
-  display: none;
-}
-@media (min-width: 768px) {
-  .sidebar {
     position: fixed;
-    top: 51px;
+    top: 2rem;
     bottom: 0;
     left: 0;
     z-index: 1000;
-    display: block;
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
     border-right: 1px solid #eee;
-  }
+    background-color: #222;
 }
 
 /* Sidebar navigation */
-.nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
+.sidebar {
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+}
+
+.sidebar .nav {
   margin-bottom: 20px;
-  margin-left: -20px;
-}
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+    height: 100%;
+
 }
 
-
-/*
- * Main content
- */
-
-.main {
-  padding: 20px;
+.sidebar .nav-item {
+    width: 100%;
 }
-@media (min-width: 768px) {
-  .main {
-    padding-right: 40px;
+
+.sidebar .nav-item + .nav-item {
+    margin-left: 0;
+}
+
+.sidebar .nav-link {
+    border-radius: 0;
+}
+
+/************************************************************************/
+
+#sidebar .list-group-item {
+    border-radius: 0;
+    background-color: #333;
+    color: #ccc;
+    border-left: 0;
+    border-right: 0;
+    border-color: #2c2c2c;
+    white-space: nowrap;
+}
+
+/* highlight active menu */
+#sidebar .list-group-item:not(.collapsed) {
+    background-color: #222;
+}
+
+/* closed state */
+#sidebar .list-group .list-group-item[aria-expanded="false"]::after {
+    content: " \f0d7";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    padding-left: 5px;
+}
+
+/* open state */
+#sidebar .list-group .list-group-item[aria-expanded="true"] {
+    background-color: #222;
+}
+
+#sidebar .list-group .list-group-item[aria-expanded="true"]::after {
+    content: " \f0da";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    padding-left: 5px;
+}
+
+/* level 1*/
+#sidebar .list-group .collapse .list-group-item {
     padding-left: 40px;
-  }
-}
-.main .page-header {
-  margin-top: 0;
 }
 
+/* level 2*/
+#sidebar .list-group .collapse > .collapse .list-group-item {
+    padding-left: 60px;
+}
 
-/*
- * Placeholder dashboard ideas
- */
+/* level 3*/
+#sidebar .list-group .collapse > .collapse > .collapse .list-group-item {
+    padding-left: 80px;
+}
 
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+@media (max-width: 48em) {
+    /* overlay sub levels on small screens */
+    #sidebar .list-group .collapse.in, #sidebar .list-group .collapsing {
+        position: absolute;
+        z-index: 1;
+        width: 190px;
+    }
+
+    #sidebar .list-group > .list-group-item {
+        text-align: center;
+        padding: .75rem .5rem;
+    }
+
+    /* hide caret icons of top level when collapsed */
+    #sidebar .list-group > .list-group-item[aria-expanded="true"]::after,
+    #sidebar .list-group > .list-group-item[aria-expanded="false"]::after {
+        display: none;
+    }
 }
-.placeholders h4 {
-  margin-bottom: 0;
+
+/* change transition animation to width when entire sidebar is toggled */
+#sidebar.collapse {
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
 }
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+
+#sidebar.collapsing {
+    opacity: 0.8;
+    width: 0;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transition-property: width;
+    -o-transition-property: width;
+    transition-property: width;
+
 }

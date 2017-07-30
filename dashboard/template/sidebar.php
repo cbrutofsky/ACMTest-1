@@ -6,57 +6,99 @@
  * Time: 11:42 PM
  */
 ?>
+<link href="/css/sidebar.css" rel="stylesheet">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li<?php if ($pageDetails == 'index') {
-                    echo ' class="active"';
-                } ?>><a href="/dashboard/index.php">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <?php
-                if ($pageDetails == 'manage_pages') {
-                    echo "<li class='active'>";
-                    echo "<a href='/dashboard/manage_pages.php'>Manage Pages</a>";
-                    echo "<ul class='nav nav-second-level'>";
-                    echo "<li><a href='#'>Page List</a></li>";
-                    echo "<li><a href='#'>Modify Page</a></li>";
-                    echo "<li><a href='#'>Add Page</a></li>";
-                    echo "<li><a href='#'>Remove Page</a></li>";
-                    echo "</ul>";
-                    echo "</li>";
-                } else {
-                    echo "<li><a href='/dashboard/manage_pages.php'>Manage Pages</a></li>";
-                }
-                ?>
-                <?php
-                if ($pageDetails == 'manage_users') {
-                    echo "<li class='active'>";
-                    echo "<a href='/dashboard/manage_users.php'>Manage Users</a>";
-                    echo "<ul class='nav nav-second-level'>";
-                    echo "<li><a href='#'>User List</a></li>";
-                    echo "<li><a href='#'>User Search</a></li>";
-                    echo "<li><a href='#'>Add User</a></li>";
-                    echo "<li><a href='#'>Modify User</a></li>";
-                    echo "</ul>";
-                    echo "</li>";
-                } else {
-                    echo "<li><a href='/dashboard/manage_users.php'>Manage Users</a></li>";
-                }
-                ?>
-                <li><a href="#">Manage Events</a></li>
-                <li><a href="#">Manage News</a></li>
-                <li><a href="#">Manage Activities</a></li>
-                <li><a href="#">Manage Resources</a></li>
-                <li><a href="#">Manage Forum</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="">Site Settings</a></li>
-                <li><a href="">Backup</a></li>
-                <li><a href="">View Site</a></li>
-            </ul>
+
+        <div class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar" id="sidebar">
+            <div class="list-group panel">
+                <a href="/dashboard/index.php" class="list-group-item active"><i class="fa fa-dashboard"></i>&nbsp;Overview</a>
+                <a href="#" class="list-group-item"><i class="fa fa-pie-chart"></i>&nbsp;Reports</a>
+                <a href="#" class="list-group-item"><i class="fa fa-bar-chart-o"></i>&nbsp;Analytics</a>
+                <a href="#" class="list-group-item"><i class="fa fa-envelope"></i>&nbsp;Export</a>
+            </div>
+
+            <div class="list-group panel">
+                <a href="#menu1" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                   aria-expanded="false"><i class="fa fa-columns"></i><span
+                            class="hidden-sm-down">&nbsp;Manage Pages</span> </a>
+                <div class="collapse" id="menu1">
+                    <a href="/dashboard/manage_pages.php" class="list-group-item" data-parent="#menu1"><i
+                                class="fa fa-question"></i>&nbsp;View Pages</a>
+                    <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-question"></i>&nbsp;Modify
+                        Page</a>
+                    <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-question"></i>&nbsp;Add
+                        Page</a>
+                    <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-question"></i>&nbsp;Delete
+                        Page</a>
+                </div>
+
+                <a href="#menu2" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                   aria-expanded="false"><i class="fa fa-users"></i> <span
+                            class="hidden-sm-down">&nbsp;Manage Users</span> </a>
+                <div class="collapse" id="menu2">
+                    <a href="/dashboard/manage_users.php" class="list-group-item" data-parent="#menu2"><i
+                                class="fa fa-users"></i>&nbsp;View Users</a>
+                    <a href="#" class="list-group-item" data-parent="#menu2"><i class="fa fa-user-md"></i>&nbsp;Modify
+                        User</a>
+                    <a href="#" class="list-group-item" data-parent="#menu2"><i class="fa fa-user-plus"></i>&nbsp;Add
+                        User</a>
+                    <a href="#" class="list-group-item" data-parent="#menu2"><i class="fa fa-user-times"></i>&nbsp;Delete
+                        User</a>
+                </div>
+
+                <a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                   aria-expanded="false"><i class="fa fa-calendar"></i> <span
+                            class="hidden-sm-down">&nbsp;Manage Events</span> </a>
+                <div class="collapse" id="menu3">
+                    <a href="#" class="list-group-item" data-parent="#menu3"><i class="fa fa-calendar-o"></i>&nbsp;View
+                        Events</a>
+                    <a href="#" class="list-group-item" data-parent="#menu3"><i class="fa fa-calendar-check-o"></i>&nbsp;Modify
+                        Event</a>
+                    <a href="#" class="list-group-item" data-parent="#menu3"><i class="fa fa-calendar-plus-o"></i>&nbsp;Add
+                        Event</a>
+                    <a href="#" class="list-group-item" data-parent="#menu3"><i class="fa fa-calendar-times-o"></i>&nbsp;Delete
+                        Event</a>
+                </div>
+
+                <a href="#menu4" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                   aria-expanded="false"><i class="fa fa-newspaper-o"></i> <span class="hidden-sm-down">&nbsp;Manage News</span>
+                </a>
+                <div class="collapse" id="menu4">
+                    <a href="#" class="list-group-item" data-parent="#menu4"><i class="fa fa-question"></i>&nbsp;Subitem</a>
+
+                </div>
+
+                <a href="#menu5" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                   aria-expanded="false"><i class="fa fa-thumb-tack"></i> <span class="hidden-sm-down">&nbsp;Manage Activities</span>
+                </a>
+                <div class="collapse" id="menu5">
+                    <a href="#" class="list-group-item" data-parent="#menu5"><i class="fa fa-question"></i>&nbsp;Subitem</a>
+
+                </div>
+
+                <a href="#menu6" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                   aria-expanded="false"><i class="fa fa-th"></i> <span
+                            class="hidden-sm-down">&nbsp;Manage Resources</span> </a>
+                <div class="collapse" id="menu6">
+                    <a href="#" class="list-group-item" data-parent="#menu6"><i class="fa fa-picture-o"></i>&nbsp;Images</a>
+                    <a href="#" class="list-group-item" data-parent="#menu6"><i class="fa fa-film"></i>&nbsp;Videos</a>
+                    <a href="#" class="list-group-item" data-parent="#menu6"><i
+                                class="fa fa-question"></i>&nbsp;Other</a>
+                </div>
+
+                <a href="#menu7" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                   aria-expanded="false"><i class="fa fa-comments"></i> <span
+                            class="hidden-sm-down">&nbsp;Manage Forum</span> </a>
+                <div class="collapse" id="menu7">
+                    <a href="#" class="list-group-item" data-parent="#menu7"><i class="fa fa-question"></i>&nbsp;Subitem</a>
+
+                </div>
+            </div>
+
+            <div class="list-group panel">
+                <a href="#" class="list-group-item"><i class="fa fa-gear"></i>&nbsp;Site Settings</a>
+                <a href="#" class="list-group-item"><i class="fa fa-database"></i>&nbsp;Backup</a>
+                <a href="#" class="list-group-item"><i class="fa fa-desktop"></i>&nbsp;View Site</a>
+            </div>
         </div>
