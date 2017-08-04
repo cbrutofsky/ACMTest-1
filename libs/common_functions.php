@@ -146,3 +146,12 @@ function data_user()
 
     return $data;
 }
+
+function data_setting_value($id)
+{
+    global $DB;
+    $q = $DB->query("SELECT * FROM settings WHERE id = '$id'");
+    $r = $q->fetch();
+
+    return $r['value'];
+}

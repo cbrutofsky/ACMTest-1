@@ -247,8 +247,27 @@ body {
     margin-right: 5rem;
 }
 
-/*
+/*  DEBUG CSS
 -------------------------------------------------- */
+#console-debug {
+    position: fixed;
+    z-index: 1000;
+
+    top: 55px;
+    left: 0px;
+    width: 40%;
+    height: 70%;
+    background-color: silver;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 5px #CCCCCC;
+}
+
+#console-debug pre {
+    height: 95%;
+}
 
 /*
 -------------------------------------------------- */

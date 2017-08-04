@@ -34,6 +34,10 @@ if ($page['id'] == 1) {
 <?php }
 ?>
 
+
+
 <?php
 include(D_TEMPLATE . '/footer.php');
 ?>
+
+<?php include('widgets/debug.php'); ?>

@@ -9,13 +9,13 @@
 
 <hr class="featurette-divider">
 
+
 <!-- FOOTER -->
 <footer class="footer">
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>&copy; 2017 - <?php echo date("Y"); ?> David McFall &middot; <a href="#">Privacy</a> &middot; <a
                 href="#">Terms</a> &middot; All Rights Reserved</p>
 </footer>
-
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -31,6 +31,7 @@
 <script src="/images/temp_assets/assets/js/vendor/holder.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/images/temp_assets/assets/js/ie10-viewport-bug-workaround.js"></script>
+
 
 </body>
 </html>

@@ -25,7 +25,8 @@
                 <div class="collapse" id="menu1">
                     <a href="/dashboard/manage_pages.php" class="list-group-item" data-parent="#menu1"><i
                                 class="fa fa-question"></i>&nbsp;View Pages</a>
-                    <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-question"></i>&nbsp;Modify
+                    <a href="/dashboard/modify_page.php" class="list-group-item" data-parent="#menu1"><i
+                                class="fa fa-question"></i>&nbsp;Modify
                         Page</a>
                     <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-question"></i>&nbsp;Add
                         Page</a>
@@ -47,7 +48,7 @@
                         User</a>
                 </div>
 
-                <a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                <a href="#menu3" class="list-group-item collapsed disabled" data-toggle="" data-parent="#sidebar"
                    aria-expanded="false"><i class="fa fa-calendar"></i> <span
                             class="hidden-sm-down">&nbsp;Manage Events</span> </a>
                 <div class="collapse" id="menu3">
@@ -61,7 +62,7 @@
                         Event</a>
                 </div>
 
-                <a href="#menu4" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                <a href="#menu4" class="list-group-item collapsed disabled" data-toggle="" data-parent="#sidebar"
                    aria-expanded="false"><i class="fa fa-newspaper-o"></i> <span class="hidden-sm-down">&nbsp;Manage News</span>
                 </a>
                 <div class="collapse" id="menu4">
@@ -69,7 +70,7 @@
 
                 </div>
 
-                <a href="#menu5" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                <a href="#menu5" class="list-group-item collapsed disabled" data-toggle="" data-parent="#sidebar"
                    aria-expanded="false"><i class="fa fa-thumb-tack"></i> <span class="hidden-sm-down">&nbsp;Manage Activities</span>
                 </a>
                 <div class="collapse" id="menu5">
@@ -77,7 +78,7 @@
 
                 </div>
 
-                <a href="#menu6" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                <a href="#menu6" class="list-group-item collapsed disabled" data-toggle="" data-parent="#sidebar"
                    aria-expanded="false"><i class="fa fa-th"></i> <span
                             class="hidden-sm-down">&nbsp;Manage Resources</span> </a>
                 <div class="collapse" id="menu6">
@@ -87,7 +88,7 @@
                                 class="fa fa-question"></i>&nbsp;Other</a>
                 </div>
 
-                <a href="#menu7" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar"
+                <a href="#menu7" class="list-group-item collapsed disabled" data-toggle="" data-parent="#sidebar"
                    aria-expanded="false"><i class="fa fa-comments"></i> <span
                             class="hidden-sm-down">&nbsp;Manage Forum</span> </a>
                 <div class="collapse" id="menu7">

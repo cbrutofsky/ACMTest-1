@@ -17,6 +17,9 @@ global $DB;
 # Functions
 
 
+# Site Setup
+$debug = data_setting_value('debug-status');
+
 # Page setup
 if (isset($_GET['page'])) {
     $pageid = $_GET['page'];

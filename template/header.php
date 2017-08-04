@@ -51,9 +51,12 @@
         <ul class="nav navbar-nav">
             <?php
             if (isLoggedIn()) {
-                echo '<li class="nav-item">';
-                echo '<buton id="btn-debug" class="btn btn-default nav-link"><i class="fa fa-bug"></i></buton>';
-                echo '</li>';
+
+                if ($debug == 1) {
+                    echo '<li class="nav-item">';
+                    echo '<buton id="btn-debug" class="btn btn-default nav-link"><i class="fa fa-bug"></i></buton>';
+                    echo '</li>';
+                }
 
                 echo '<li class="nav-item dropdown">';
                 echo '<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" id="dropdown01"
