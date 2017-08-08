@@ -24,6 +24,8 @@ if ($page['title'] == 'Home') {
     include(D_TEMPLATE . '/event_page.php');
 } elseif ($page['title'] == 'Join') {
     include(D_TEMPLATE . '/join_page.php');
+} elseif ($page['title'] == 'Resources') {
+    include(D_TEMPLATE . '/resources_page.php');
 } else { ?>
     <div id="banner" class="baseHeader">
         <h1 class="page_title"><?php echo $page['header']; ?></h1>
@@ -47,6 +49,9 @@ include(D_TEMPLATE . '/footer.php');
 
 if ($page['title'] == 'Events') {
     include('widgets/calendar.php');
+}
+if ($page['title'] == 'Resources') {
+    echo '<script src="libs/js/gallery.js"></script>';
 }
 ?>
 

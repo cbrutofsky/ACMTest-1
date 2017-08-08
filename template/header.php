@@ -35,7 +35,7 @@
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/index.php">Kennesaw ACM</a>
+    <a class="navbar-brand" href="/">Kennesaw ACM</a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav mr-auto">
             <?php
@@ -64,6 +64,7 @@
                 echo '<div class="dropdown-menu" aria-labelledby="dropdown01">';
 
                 echo '<a class="dropdown-item" href="#">Profile</a>';
+                echo '<a class="dropdown-item" href="#">Messages</a>';
                 echo '<a class="dropdown-item" href="../login.php">Login (Test)</a>';
                 echo '<a class="dropdown-item" href="../dashboard/index.php">Admin Dashboard</a>';
                 echo '<a class="dropdown-item" href="#">Account Settings</a>';

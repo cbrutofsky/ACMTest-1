@@ -23,14 +23,15 @@
                    aria-expanded="false"><i class="fa fa-columns"></i><span
                             class="hidden-sm-down">&nbsp;Manage Pages</span> </a>
                 <div class="collapse" id="menu1">
-                    <a href="/dashboard/manage_pages.php" class="list-group-item" data-parent="#menu1"><i
-                                class="fa fa-question"></i>&nbsp;View Pages</a>
-                    <a href="/dashboard/modify_page.php" class="list-group-item" data-parent="#menu1"><i
-                                class="fa fa-question"></i>&nbsp;Modify
+                    <a href="/dashboard/pages/manage_pages.php" class="list-group-item" data-parent="#menu1"><i
+                                class="fa fa-window-maximize"></i>&nbsp;View Pages</a>
+                    <a href="/dashboard/pages/modify_page.php" class="list-group-item" data-parent="#menu1"><i
+                                class="fa fa-window-restore"></i>&nbsp;Modify
                         Page</a>
-                    <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-question"></i>&nbsp;Add
+                    <a href="/dashboard/pages/add_page.php" class="list-group-item" data-parent="#menu1"><i
+                                class="fa fa-plus"></i>&nbsp;Add
                         Page</a>
-                    <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-question"></i>&nbsp;Delete
+                    <a href="#" class="list-group-item" data-parent="#menu1"><i class="fa fa-window-close-o"></i>&nbsp;Delete
                         Page</a>
                 </div>
 
@@ -38,7 +39,7 @@
                    aria-expanded="false"><i class="fa fa-users"></i> <span
                             class="hidden-sm-down">&nbsp;Manage Users</span> </a>
                 <div class="collapse" id="menu2">
-                    <a href="/dashboard/manage_users.php" class="list-group-item" data-parent="#menu2"><i
+                    <a href="/dashboard/users/manage_users.php" class="list-group-item" data-parent="#menu2"><i
                                 class="fa fa-users"></i>&nbsp;View Users</a>
                     <a href="#" class="list-group-item" data-parent="#menu2"><i class="fa fa-user-md"></i>&nbsp;Modify
                         User</a>
@@ -78,11 +79,12 @@
 
                 </div>
 
-                <a href="#menu6" class="list-group-item collapsed disabled" data-toggle="" data-parent="#sidebar"
+                <a href="#menu6" class="list-group-item collapsed " data-toggle="collapse" data-parent="#sidebar"
                    aria-expanded="false"><i class="fa fa-th"></i> <span
                             class="hidden-sm-down">&nbsp;Manage Resources</span> </a>
                 <div class="collapse" id="menu6">
-                    <a href="#" class="list-group-item" data-parent="#menu6"><i class="fa fa-picture-o"></i>&nbsp;Images</a>
+                    <a href="/dashboard/resources/manage_images.php" class="list-group-item" data-parent="#menu6"><i
+                                class="fa fa-picture-o"></i>&nbsp;Images</a>
                     <a href="#" class="list-group-item" data-parent="#menu6"><i class="fa fa-film"></i>&nbsp;Videos</a>
                     <a href="#" class="list-group-item" data-parent="#menu6"><i
                                 class="fa fa-question"></i>&nbsp;Other</a>

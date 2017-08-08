@@ -13,7 +13,7 @@ $all_vars = get_defined_vars();
 
 <script src="/libs/js/debug.js"></script>
 
-<div id="console-debug" class="console-debug">
+<div id="console-debug" class="console-debug" style="display: none">
     <h3>Page Variables</h3>
     <pre>
         <?php

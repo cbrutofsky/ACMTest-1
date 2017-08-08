@@ -83,9 +83,15 @@ if($_POST)
         $pageImage = $_POST['normal_image'];
         $pageBody = $_POST['normal_body'];
 
-        $stmt = $DB->prepare("UPDATE pages SET parent='$pageParent', title='$pageTitle', 
-                              header='$pageHeader', banner_image='$pageImage', body='$pageBody' 
-                              WHERE id= $pageID;");
+        $stmt = $DB->prepare('UPDATE pages SET parent = :pageParent, title = :pageTitle, 
+                              header = :pageHeader, banner_image = :pageImage, body = :pageBody 
+                              WHERE id = :pageID;');
+        $stmt->bindValue(':pageParent', $pageParent, PDO::PARAM_INT);
+        $stmt->bindValue(':pageTitle', $pageTitle, PDO::PARAM_STR);
+        $stmt->bindValue(':pageHeader', $pageHeader, PDO::PARAM_STR);
+        $stmt->bindValue(':pageImage', $pageImage, PDO::PARAM_STR);
+        $stmt->bindValue(':pageBody', $pageBody, PDO::PARAM_STR);
+        $stmt->bindValue(':pageID', $pageID, PDO::PARAM_INT);
         $stmt->execute();
     }
 }

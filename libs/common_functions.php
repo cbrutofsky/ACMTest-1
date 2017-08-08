@@ -155,3 +155,12 @@ function data_setting_value($id)
 
     return $r['value'];
 }
+
+function getNumberOfPages()
+{
+    global $DB;
+    $q = $DB->prepare("SELECT id FROM pages;");
+    $q->execute();
+
+    return $q->rowCount();
+}

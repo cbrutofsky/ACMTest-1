@@ -21,6 +21,8 @@ include('libs/login.php');
 include(D_TEMPLATE . '/header.php');
 ?>
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
     <div id="banner" class="baseHeader">
         <h1 class="page_title"><?php echo $page['header']; ?></h1>
         <img src="/images/home_page_images/AAEAAQAAAAAAAAkDAAAAJGVmMWZiZmFkLTMwMDQtNDUzMy1iMmRjLTY2ZjE0ZTI0ZjQxOQ.jpg"
@@ -42,6 +44,11 @@ include(D_TEMPLATE . '/header.php');
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
+
+            <div class="g-recaptcha" data-sitekey="6LfpICwUAAAAACjmFOkQ7MY1IDlPyihaC_Mf2w5l"></div>
+
+            <br/>
+
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         </form>
 
