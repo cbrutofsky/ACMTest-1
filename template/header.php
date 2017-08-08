@@ -63,7 +63,7 @@
                                aria-haspopup="true" aria-expanded="false">' . $user['fullname_reverse'] . '</a>';
                 echo '<div class="dropdown-menu" aria-labelledby="dropdown01">';
 
-
+                echo '<a class="dropdown-item" href="#">Profile</a>';
                 echo '<a class="dropdown-item" href="../login.php">Login (Test)</a>';
                 echo '<a class="dropdown-item" href="../dashboard/index.php">Admin Dashboard</a>';
                 echo '<a class="dropdown-item" href="#">Account Settings</a>';
