@@ -193,9 +193,9 @@ include('../template/sidebar.php');
             echo '<input id="page_parent" class="form-control" name="normal_parent" type="text" value="' . $r['parent'] . '" readonly>';
             echo '<br><span><h6>Page Title:</h6></span>';
             echo '<input id="page_title" class="form-control" name="normal_title" type="text" value="'. $r['title'] .'">';
-            echo '<br><span><h6>Page Description:</h6></span>';
+            echo '<br><span><h6>Banner Label:</h6></span>';
             echo '<input id="page_header" class="form-control" name="normal_header" type="text" value="'. $r['header'] .'">';
-            echo '<br><span><h6>Page Image:</h6></span>';
+            echo '<br><span><h6>Banner Image:</h6></span>';
             echo '<input id="page_image" class="form-control" name="normal_image" type="text" value="'. $r['banner_image'] .'">';
             echo '<br><span><h6>Page Content:</h6></span>';
             echo '<textarea id="page_body" class="form-control" name="normal_body" rows="10" cols="130">'. $r['body'] .'</textarea><br>';
@@ -224,7 +224,7 @@ include('../template/sidebar.php');
     tinymce.init({
         selector: '#page_body',
         theme: 'modern',
-        width: 1000,
+        width: 1100,
         height: 900,
         plugins: [
             'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',

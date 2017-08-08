@@ -31,6 +31,13 @@ include(D_TEMPLATE . '/header.php');
 
     <div class="container">
 
+        <?php
+
+        echo $_POST['inputEmail'];
+        echo $_POST['inputPassword'];
+
+        ?>
+
         <form class="form-signin" action="login.php" method="post" role="form">
             <h2 class="form-signin-heading">Please sign in</h2>
             <label for="inputEmail" class="sr-only">Email address</label>
