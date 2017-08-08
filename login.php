@@ -29,15 +29,6 @@ include(D_TEMPLATE . '/header.php');
 
     <div class="container">
 
-        <?php
-        if ($_POST) {
-            echo $_POST['inputEmail'];
-            echo '<br>';
-            echo $_POST['inputPassword'];
-        }
-        //echo getOptimalBcryptCostParameter();
-        ?>
-
         <form class="form-signin" action="login.php" method="post" role="form">
             <h2 class="form-signin-heading">Please sign in</h2>
             <label for="inputEmail" class="sr-only">Email address</label>

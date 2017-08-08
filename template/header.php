@@ -44,7 +44,7 @@
             while ($r = $q->fetch()) { ?>
                 <li class="nav-item <?php if ($page['id'] == $r['id']) {
                     echo 'active';
-                } ?>"><a class="nav-link" href="?page=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></li>
+                } ?>"><a class="nav-link" href="/?page=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></li>
             <?php } ?>
         </ul>
 

@@ -16,11 +16,14 @@ include(D_TEMPLATE . '/header.php');
 
 <?php
 
-if ($page['id'] == 1) {
-    //echo $page['body_formatted'];
+if ($page['title'] == 'Home') {
 
     include(D_TEMPLATE . '/home_page.php');
 
+} elseif ($page['title'] == 'Events') {
+    include(D_TEMPLATE . '/event_page.php');
+} elseif ($page['title'] == 'Join') {
+    include(D_TEMPLATE . '/join_page.php');
 } else { ?>
     <div id="banner" class="baseHeader">
         <h1 class="page_title"><?php echo $page['header']; ?></h1>
@@ -38,6 +41,13 @@ if ($page['id'] == 1) {
 
 <?php
 include(D_TEMPLATE . '/footer.php');
+?>
+
+<?php
+
+if ($page['title'] == 'Events') {
+    include('widgets/calendar.php');
+}
 ?>
 
 <?php include('widgets/debug.php'); ?>
